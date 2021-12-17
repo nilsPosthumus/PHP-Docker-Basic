@@ -1,0 +1,13 @@
+services:
+  atempraxis-rapold:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 0.0.0.0:80:80
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      default:
+        aliases:
+          - atempraxis-rapold.lo
